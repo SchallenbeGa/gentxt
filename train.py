@@ -64,7 +64,7 @@ if TRAIN:
 else:
     model.load_state_dict(torch.load('model/model.pth'))
 
-initial = 'Je suis très'
+initial = 'Je suis'
 last = ""
 for x in range(10):
     if x == 0:
