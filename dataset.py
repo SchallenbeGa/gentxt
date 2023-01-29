@@ -17,8 +17,8 @@ class Dataset(torch.utils.data.Dataset):
         self.words_indexes = [self.word_to_index[w] for w in self.words]
 
     def load_words(self):
-        train_df = pd.read_csv('data/letters.csv')
-        text = train_df['Letters'].str.cat(sep=' ')
+        train_df = pd.read_csv('data/intro.csv')
+        text = train_df['para1'].str.cat(sep=' ')#get introduction example
         return text.split(' ')
 
     def get_uniq_words(self):
